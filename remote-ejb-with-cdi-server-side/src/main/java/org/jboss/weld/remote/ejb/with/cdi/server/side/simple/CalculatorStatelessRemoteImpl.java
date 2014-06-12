@@ -22,7 +22,7 @@ import javax.ejb.Stateless;
 import org.jboss.weld.remote.ejb.with.cdi.server.side.CalculatorStatelessRemote;
 
 /**
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 @Stateless
 @Remote(CalculatorStatelessRemote.class)

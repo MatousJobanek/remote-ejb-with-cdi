@@ -26,7 +26,7 @@ import org.jboss.weld.remote.ejb.with.cdi.server.side.util.annotation.Advanced;
 import org.jboss.weld.remote.ejb.with.cdi.server.side.util.annotation.Basic;
 
 /**
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 @Stateless
 @Remote(CalculatorStatelessRemote.class)

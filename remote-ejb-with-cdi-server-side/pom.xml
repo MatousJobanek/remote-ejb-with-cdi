@@ -10,7 +10,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <url>http://jboss.org/jbossas</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -44,9 +43,15 @@
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.4.Final</version>
                 <configuration>
-                    <filename>${project.build.finalName}.war</filename>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
                 </configuration>
             </plugin>
 
@@ -57,12 +62,8 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            
-            <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.0.1.Final</version>
-            </plugin>
+
+
         </plugins>
     </build>
 </project>

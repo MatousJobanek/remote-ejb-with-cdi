@@ -29,7 +29,7 @@ import org.jboss.weld.remote.ejb.with.cdi.server.side.util.annotation.Increment;
 
 /**
  * @author Jaikiran Pai
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 @Stateful
 @Remote(CounterStatefulRemote.class)

@@ -18,7 +18,7 @@ package org.jboss.weld.remote.ejb.with.cdi.server.side;
 
 /**
  * @author Jaikiran Pai
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 public interface CalculatorStatelessRemote {
 

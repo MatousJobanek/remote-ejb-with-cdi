@@ -22,7 +22,7 @@ import javax.ejb.Stateful;
 import org.jboss.weld.remote.ejb.with.cdi.server.side.CounterStatefulRemote;
 
 /**
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 @Stateful
 @Remote(CounterStatefulRemote.class)

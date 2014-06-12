@@ -21,7 +21,7 @@ import javax.transaction.SystemException;
 
 /**
  * @author Jaikiran Pai
- * @author mjobanek
+ * @author Matous Jobanek <mjobanek@redhat.com>
  */
 public interface CounterStatefulRemote {
 
