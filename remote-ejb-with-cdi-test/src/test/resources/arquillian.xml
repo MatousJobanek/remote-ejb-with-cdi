@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<arquillian xmlns="http://www.jboss.org/arquillian-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.jboss.org/arquillian-1.0 http://jboss.org/schema/arquillian/arquillian-1.0.xsd">
+
+    <engine>
+        <property name="deploymentExportPath">target/</property>
+    </engine>
+
+   <!-- <group qualifier="jbossas-cluster-7"> -->
+
+        <!-- <container qualifier="container1" default="true" mode="manual" managed="false"> -->
+        <container qualifier="container1" default="true">
+            <configuration>
+                <property name="managementAddress">${node1.managementAddress:127.0.0.1}</property>
+                <property name="managementPort">${node1.managementPort:9999}</property>
+                <property name="jbossHome">${node1.jbossHome:/home/mjobanek/servers/jboss-eap-6.2}</property>
+                <property name="javaVmArguments">-Djboss.node.name=${node1.nodeName:node1} -Djava.net.preferIPv4Stack=true -Xmx1024m -XX:MaxPermSize=512m -Djboss.socket.binding.port-offset=${node1.portOffset:0} -Djboss.default.multicast.address=${node1.multicastAddress}</property>
+                <property name="serverConfig">${jboss.server.config.file.name:standalone.xml}</property>
+            </configuration>
+        </container>
+
+        <container qualifier="container2" default="false" mode="manual" managed="false">
+            <configuration>
+                <property name="managementAddress">${node2.managementAddress:127.0.2.1}</property>
+                <property name="managementPort">${node2.managementPort:9999}</property>
+                <property name="jbossHome">${node2.jbossHome}</property>
+                <property name="javaVmArguments">-Djboss.node.name=${node2.nodeName:node2} -Djava.net.preferIPv4Stack=true -Xmx1024m -XX:MaxPermSize=512m -Djboss.socket.binding.port-offset=${node2.portOffset:10000} -Djboss.default.multicast.address=${node2.multicastAddress}</property>
+                <property name="serverConfig">${jboss.server.config.file.name:standalone-ha.xml}</property>
+            </configuration>
+        </container>
+
+    <!-- </group> -->
+    
+    <extension qualifier="selenium-server">
+        <property name="enable">true</property>
+    </extension>
+
+</arquillian>
+
